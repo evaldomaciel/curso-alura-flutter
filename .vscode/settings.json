@@ -1,0 +1,6 @@
+{
+    "editor.minimap.maxColumn": 160,
+    "git.repositoryScanMaxDepth": 1,
+    "editor.wordWrapColumn": 160,
+    "diffEditor.wordWrap": "off"
+}

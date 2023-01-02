@@ -11,8 +11,8 @@
 ##    1411-flutter-video33-criando-a-transferencia-facecam - 359098205.mp4
 ##    1411-flutter-video41-extraindo-widgets-flexiveis-facecam - 359098371.mp4
 ##    1411-flutter-video42-integrando-a-lista-com-o-formulario-facecam - 397283982.mp4
-    1411-flutter-video43-utilizando-o-listview-facecam - 359094388.mp4
-    1411-flutter-video51-implementando-o-statefulwidget-facecam - 359094505.mp4
+##    1411-flutter-video43-utilizando-o-listview-facecam - 359094388.mp4
+##    1411-flutter-video51-implementando-o-statefulwidget-facecam - 359094505.mp4
     1411-flutter-video52-evitando-bugs-comuns-facecam - 397285367.mp4
     1411-flutter-video53-ajustando-o-tema-do-projeto-facecam - 359094798.mp4
     1411-flutter-video54-refatorando-o-projeto-facecam - 397286554.mp4

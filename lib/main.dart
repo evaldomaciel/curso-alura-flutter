@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, use_key_in_widget_constructors, unused_field, prefer_const_constructors_in_immutables
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, use_key_in_widget_constructors, unused_field, prefer_const_constructors_in_immutables, non_constant_identifier_names
 
 import 'package:flutter/material.dart';
 
@@ -36,12 +36,13 @@ class FormularioTransferencia extends StatelessWidget {
         ),
         Editor(
           controlador: _controladorCampoValor,
-          rotulo: "Numero da conta",
+          rotulo: "Valor",
           dica: "0.00",
           icone: Icons.monetization_on,
         ),
         ElevatedButton(
-            onPressed: () => _criaTransferencia(context), child: Text("Confirmar")),
+            onPressed: () => _criaTransferencia(context),
+            child: Text("Confirmar")),
       ]),
     );
   }
@@ -59,19 +60,28 @@ class FormularioTransferencia extends StatelessWidget {
 
 /// StatefulWidget é possível modificar o conteudo */
 /// StatelessWidget não é possível editar o conteudo */
-class ListaTranferencias extends StatelessWidget {
+class ListaTranferencias extends StatefulWidget {
+  final List<Transferencia> _transferencias = [];
+
+  @override
+  State<StatefulWidget> createState() {
+    return ListaTransferenciasState();
+  }
+}
+
+class ListaTransferenciasState extends State<ListaTranferencias> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text("Transferências"),
       ),
-      body: Column(
-        children: [
-          ItemTransferencia(Transferencia(100.00, 1001)),
-          ItemTransferencia(Transferencia(200.00, 1005)),
-          ItemTransferencia(Transferencia(300.00, 2003)),
-        ],
+      body: ListView.builder(
+        itemCount: widget._transferencias.length,
+        itemBuilder: (context, indice) {
+          final transferencia = widget._transferencias[indice];
+          return ItemTransferencia(transferencia);
+        },
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
@@ -81,10 +91,13 @@ class ListaTranferencias extends StatelessWidget {
               return FormularioTransferencia();
             },
           ));
-          future.then((TransferenciaRecebida) {
+          future.then((transferenciaRecebida) {
             debugPrint('Chegou no then do future');
-            debugPrint('$TransferenciaRecebida');
+            debugPrint('$transferenciaRecebida');
+            setState(() {
+              widget._transferencias.add(transferenciaRecebida);
             });
+          });
         },
         child: Icon(Icons.add),
       ),
