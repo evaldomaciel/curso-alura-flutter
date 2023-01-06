@@ -21,9 +21,9 @@
 - 1411-flutter-video54-refatorando-o-projeto-facecam - 397286554.mp4
 - 1411-flutter-video55-conclusao-facecam - 359095081.mp4
 - flutter - 458221077.mp4
-## Pendente
-### Curso intermediário (Parte 1)
+### Curso intermediário: Gerenciamento de estados com *provider*
 - 1684-flutterestados-video11-introducao - 424910311.mp4
+## Pendente
 - 1684-flutterestados-video12-dashboard-e-saldo - 424910381.mp4
 - 1684-flutterestados-video13-saldo - 424910506.mp4
 - 1684-flutterestados-video21-single-source-of-truth - 424910613.mp4
