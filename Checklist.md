@@ -17,9 +17,9 @@
 - 1411-flutter-video51-implementando-o-statefulwidget-facecam - 359094505.mp4
 - 1411-flutter-video52-evitando-bugs-comuns-facecam - 397285367.mp4
 - 1411-flutter-video53-ajustando-o-tema-do-projeto-facecam - 359094798.mp4
+- 1411-flutter-video54-refatorando-o-projeto-facecam - 397286554.mp4
 
 ## Pendente
-- 1411-flutter-video54-refatorando-o-projeto-facecam - 397286554.mp4
 - 1411-flutter-video55-conclusao-facecam - 359095081.mp4
 - flutter - 458221077.mp4
 - 1684-flutterestados-video11-introducao - 424910311.mp4
