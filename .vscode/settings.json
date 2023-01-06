@@ -2,5 +2,16 @@
     "editor.minimap.maxColumn": 160,
     "git.repositoryScanMaxDepth": 1,
     "editor.wordWrapColumn": 160,
-    "diffEditor.wordWrap": "off"
+    "diffEditor.wordWrap": "off",
+    "cSpell.words": [
+        "Conta",
+        "cria",
+        "Criada",
+        "Formulario",
+        "numero",
+        "transferencia",
+        "Transferencia",
+        "transferencias"
+    ],
+    "cSpell.language": "en,pt,pt-BR"
 }

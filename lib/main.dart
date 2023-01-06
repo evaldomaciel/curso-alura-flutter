@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, use_key_in_widget_constructors, unused_field, prefer_const_constructors_in_immutables, non_constant_identifier_names
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, use_key_in_widget_constructors, unused_field, prefer_const_constructors_in_immutables, non_constant_identifier_names, prefer_final_fields
 
 import 'package:flutter/material.dart';
 
@@ -17,9 +17,15 @@ class Bytebankapp extends StatelessWidget {
   }
 }
 
-class FormularioTransferencia extends StatelessWidget {
-  final TextEditingController _controladorCampoNumeroConta =
-      TextEditingController();
+class FormularioTransferencia extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return FormularioTransferenciaState();
+  }
+}
+
+class FormularioTransferenciaState extends State<FormularioTransferencia> {
+  TextEditingController _controladorCampoNumeroConta = TextEditingController();
   final TextEditingController _controladorCampoValor = TextEditingController();
 
   @override
@@ -28,22 +34,24 @@ class FormularioTransferencia extends StatelessWidget {
       appBar: AppBar(
         title: Text("Fazendo uma transferência"),
       ),
-      body: Column(children: <Widget>[
-        Editor(
-          controlador: _controladorCampoNumeroConta,
-          rotulo: "Numero da conta",
-          dica: "0000",
-        ),
-        Editor(
-          controlador: _controladorCampoValor,
-          rotulo: "Valor",
-          dica: "0.00",
-          icone: Icons.monetization_on,
-        ),
-        ElevatedButton(
-            onPressed: () => _criaTransferencia(context),
-            child: Text("Confirmar")),
-      ]),
+      body: SingleChildScrollView(
+        child: Column(children: <Widget>[
+          Editor(
+            controlador: _controladorCampoNumeroConta,
+            rotulo: "Numero da conta",
+            dica: "0000",
+          ),
+          Editor(
+            controlador: _controladorCampoValor,
+            rotulo: "Valor",
+            dica: "0.00",
+            icone: Icons.monetization_on,
+          ),
+          ElevatedButton(
+              onPressed: () => _criaTransferencia(context),
+              child: Text("Confirmar")),
+        ]),
+      ),
     );
   }
 
@@ -85,18 +93,17 @@ class ListaTransferenciasState extends State<ListaTranferencias> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          debugPrint('teste');
           final Future future = Navigator.push(context, MaterialPageRoute(
             builder: (context) {
               return FormularioTransferencia();
             },
           ));
           future.then((transferenciaRecebida) {
-            debugPrint('Chegou no then do future');
-            debugPrint('$transferenciaRecebida');
-            setState(() {
-              widget._transferencias.add(transferenciaRecebida);
-            });
+            if (transferenciaRecebida != null) {
+              setState(() {
+                widget._transferencias.add(transferenciaRecebida);
+              });
+            }
           });
         },
         child: Icon(Icons.add),
