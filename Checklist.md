@@ -1,6 +1,7 @@
 # Vídeos assistidos
 
 ## Realizado
+### Curso básico
 - 1411-flutter-video11-introducao-facecam - 359095160.mp4
 - 1411-flutter-video12-introducao-ao-flutter-facecam - 359095371.mp4
 - 1411-flutter-video13-abrindo-o-projeto-no-intellij-facecam - 397280583.mp4
@@ -18,10 +19,9 @@
 - 1411-flutter-video52-evitando-bugs-comuns-facecam - 397285367.mp4
 - 1411-flutter-video53-ajustando-o-tema-do-projeto-facecam - 359094798.mp4
 - 1411-flutter-video54-refatorando-o-projeto-facecam - 397286554.mp4
-
-## Pendente
 - 1411-flutter-video55-conclusao-facecam - 359095081.mp4
 - flutter - 458221077.mp4
+## Pendente
 - 1684-flutterestados-video11-introducao - 424910311.mp4
 - 1684-flutterestados-video12-dashboard-e-saldo - 424910381.mp4
 - 1684-flutterestados-video13-saldo - 424910506.mp4
