@@ -1,7 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:bytebank/components/saldo.dart';
-import 'package:bytebank/screens/desposito/formulario.dart';
+import 'package:bytebank/screens/deposito/formulario.dart';
+import 'package:bytebank/screens/transferencia/formulario.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -22,18 +23,35 @@ class Dashboard extends StatelessWidget {
             alignment: Alignment.topCenter,
             child: SaldoCard(),
           ),
+          ButtonBar(
+            alignment: MainAxisAlignment.center,
+            children: <Widget>[
+              ElevatedButton(
+                child: Text('Receber deposito'),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) {
+                      return FormularioDeposito();
+                    }),
+                  );
+                },
+              ),
+              ElevatedButton(
+                child: Text('Nova transferência'),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) {
+                      return FormularioTransferencia();
+                    }),
+                  );
+                },
+              ),
+            ],
+          ),
           Consumer<Saldo>(builder: (context, saldo, child) {
-            return ElevatedButton(
-              child: Text('Adiciona'),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) {
-                    return FormularioDeposito();
-                  }),
-                );
-              },
-            );
+            return Text("");
           })
         ],
       ),

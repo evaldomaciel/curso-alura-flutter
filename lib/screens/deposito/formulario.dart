@@ -1,9 +1,12 @@
+// ignore_for_file: use_key_in_widget_constructors, no_leading_underscores_for_local_identifiers, prefer_const_constructors
+
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import '../../components/editor.dart';
+import '../../models/saldo.dart';
 
 class FormularioDeposito extends StatelessWidget {
-  // const FormularioDeposito({super.key});
   final TextEditingController _controladorCampoValor = TextEditingController();
 
   @override
@@ -34,6 +37,26 @@ class FormularioDeposito extends StatelessWidget {
   }
 
   _criaDeposito(context) {
-    Navigator.pop(context);
+    final double? valor = double.tryParse(_controladorCampoValor.text);
+    final depositoValido = _validaDeposito(valor);
+    if (depositoValido) {
+      _atualizaEstado(context, valor);
+      // Fecha a tela
+      Navigator.pop(context);
+    } 
+  }
+
+  _validaDeposito(valor) {
+    final _campoPreenchido = valor != null;
+    return _campoPreenchido;
+  }
+
+  _atualizaEstado(context, valor) {
+    /** 
+     * Para não recriar o componente todo vez que o estado mudar, vamos utilizar o provider.of
+     * listen:false indica que não vamos ficar escutando tudo o que for mudar 
+     * Por fim, adicionamos o valor. 
+     */
+    Provider.of<Saldo>(context, listen:false).adiciona(valor);
   }
 }
