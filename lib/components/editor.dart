@@ -8,12 +8,13 @@ class Editor extends StatelessWidget {
   final String dica;
   final icone;
 
-  const Editor(
-      {super.key,
-      required this.controlador,
-      required this.rotulo,
-      required this.dica,
-      this.icone});
+  const Editor({
+    super.key,
+    required this.controlador,
+    required this.rotulo,
+    required this.dica,
+    this.icone,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -25,9 +26,10 @@ class Editor extends StatelessWidget {
         ),
         controller: controlador,
         decoration: InputDecoration(
-            labelText: rotulo,
-            hintText: dica,
-            icon: icone != null ? Icon(icone) : null),
+          labelText: rotulo,
+          hintText: dica,
+          icon: icone != null ? Icon(icone) : null,
+        ),
         keyboardType: TextInputType.number,
       ),
     );
