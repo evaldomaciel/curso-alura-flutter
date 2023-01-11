@@ -37,10 +37,10 @@
 - 1684-flutterestados-video43-adicionar-transferencia - 424912496.mp4
 - 1684-flutterestados-video44-saldo-suficiente - 424912682.mp4
 - 1684-flutterestados-video51-saldo-suficiente - 424912763.mp4
-## Pendente
 - 1684-flutterestados-video52-ultimas-transferencias - 424912981.mp4
 - 1684-flutterestados-video53-validacoes-finais - 424913126.mp4
 - 1684-flutterestados-video54-conclusao - 424913314.mp4
+## Pendente
 - 1525-flutterpersistencia-video11-introducao - 372378490.mp4
 - 1525-flutterpersistencia-video12-criando-o-projeto - 372378542.mp4
 - 1525-flutterpersistencia-video13-adicionando-imagem-e-botao-de-contatos - 372378641.mp4
