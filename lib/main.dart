@@ -26,3 +26,22 @@ class Bytebankapp extends StatelessWidget {
 }
 /// StatefulWidget é possível modificar o conteúdo */
 /// StatelessWidget não é possível editar o conteúdo */
+/**
+ * Vamos a uma pequena revisão do Dart. 
+ * Começamos a semana desenvolvimento uma aplicativo de transferencias de valores, chamamos de Bytebank
+ * Desenvolvemos um arquivo principal chamado main.dart, na pasta lib do projeto
+ * As pastas com nome de sistema operacionais carregam códigos específicos de cada sistema, apenas em situações muito especificas será necessário alterar esses arquivos, por isso, focamos só no código da aplicação, no main.dart
+ * Utilizamos a biblioteca de recursos Material Design, do Flutter para estilizar nosso aplicativo.
+ * Separamos nosso projetos em pastas, muito similar ao que fazemos no padrão MVC, criamos uma pasta components (que poderia ser controllers), screens (que poderia ser views) e models (que seguiu o padrão xD).
+ * Geralmente utilizamos StatelessWidget, para componentes que não deverão mudar de estado e StatefulWidget para componentes que podem mudar de estado.
+ * Nossa lista de transferência é um StateFulWidget, afinal, precisa ser mutável. 
+ * Nossa lista de transferências carrega uma classe principal que define o estilo do Material Design, chamada Scaffold. 
+ * Nosso Scaffold recebeu 3 atributos para definir nossa página
+ *  - appbar: contem as informações da barra superior 
+ *  - body: contem as informações do corpo da tela, basicamente carrega mais widgets.  
+ *  - floatingActionButton: um botão de ação, que abre nosso formulário de transferências. 
+ * Criamos classe chamada ListaTranferencias que estende StatefulWidget
+ * Nessa classe definimo "@override", @ indica que é uma anotação, a palavra "override" indica que esta subscrevendo um método, que nesse caso é o createState(), que por sua vez carrega ListaTransferenciasState().
+ * ListaTransferenciasState, é onde acontece a mágica, aqui estamos subscrevendo o método build(), 
+ * 
+ */
