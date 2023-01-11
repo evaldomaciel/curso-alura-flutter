@@ -28,10 +28,10 @@
 - 1684-flutterestados-video21-single-source-of-truth - 424910613.mp4
 - 1684-flutterestados-video22-provider - 424910664.mp4
 - 1684-flutterestados-video23-consumer - 424910760.mp4
-## Pendente
 - 1684-flutterestados-video31-adiciona - 424910841.mp4
 - 1684-flutterestados-video32-adiciona - 424910962.mp4
 - 1684-flutterestados-video33-deposito - 424911030.mp4
+## Pendente
 - 1684-flutterestados-video34-providerof - 424911209.mp4
 - 1684-flutterestados-video41-multiprovider - 424911325.mp4
 - 1684-flutterestados-video42-model-transferencias - 424912428.mp4
