@@ -3,8 +3,14 @@
 import 'package:bytebank/screens/dashboard/dashboard.dart';
 import 'package:bytebank/screens/transferencia/lista.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
-void main() => runApp(Bytebankapp());
+import 'models/saldo.dart';
+
+void main() => runApp(ChangeNotifierProvider(
+      create: ((context) => Saldo(0)),
+      child: Bytebankapp(),
+    ));
 
 class Bytebankapp extends StatelessWidget {
   const Bytebankapp({super.key});

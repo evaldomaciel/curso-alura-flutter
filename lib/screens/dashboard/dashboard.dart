@@ -1,7 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:bytebank/components/saldo.dart';
-import 'package:bytebank/models/saldo.dart';
 import 'package:flutter/material.dart';
 
 class Dashboard extends StatelessWidget {
@@ -15,7 +14,7 @@ class Dashboard extends StatelessWidget {
       ),
       body: Align(
         alignment: Alignment.topCenter,
-        child: SaldoCard(Saldo(30.01)),
+        child: SaldoCard(),
       ),
     );
   }
